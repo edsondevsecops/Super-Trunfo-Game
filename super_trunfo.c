@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main(){
     
+    //Declaração das variáveis
     char estado1[20], estado2[20];
     char codigo1[5], codigo2[5];
     char cidade1[50], cidade2[50];
@@ -8,7 +9,16 @@ int main(){
     float area1, area2;
     float pib1, pib2;
     int numdepontosturisticos1, numdepontosturisticos2;
+    float densidadepopulacional1, densidadepopulacional2;
+    float pibpercapta1, pibpercapta2;
 
+    //Cálculo
+    densidadepopulacional1 = (float) populacao1 / area1;
+    densidadepopulacional2 = (float) populacao2 / area2;
+    pibpercapta1 = (float) pib1 / populacao1;
+    pibpercapta2 = (float) pib2 / populacao2;
+
+    //Entrada de dados da primeira carta do Super Trunfo
     printf("---Vamos cadastrar a primeira carta do Super Trunfo---\n\n");
 
     printf("Digite o estado da carta: \n");
@@ -36,6 +46,7 @@ int main(){
     printf("Digite o número de pontos turísticos da cidade: \n");
     scanf("%d", &numdepontosturisticos1);
 
+    //Entrada de dados da segunda carta do Super Trunfo
     printf("\n---Vamos cadastrar a segunda carta do Super Trunfo---\n\n");
 
     printf("Digite o estado da carta: \n");
@@ -66,11 +77,12 @@ int main(){
 
     printf("\n------------------------\n\n");
 
+    //Saída de dados das cartas cadastradas
     printf("As cartas cadastradas no Super Trunfo foram:\n\n");
     printf("Carta 1\n");
-    printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\n\n", estado1, codigo1, cidade1, populacao1, area1, pib1, numdepontosturisticos1);
+    printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %f hab/Km²\nPIB per capta: %.2f reais\n\n", estado1, codigo1, cidade1, populacao1, area1, pib1, numdepontosturisticos1, densidadepopulacional1, pibpercapta1);
     printf("Carta 2\n");
-    printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\n", estado2, codigo2, cidade2, populacao2, area2, pib2, numdepontosturisticos2);
+    printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %f hab/Km²\nPIB per capta: %.2f reais\n", estado2, codigo2, cidade2, populacao2, area2, pib2, numdepontosturisticos2, densidadepopulacional2, pibpercapta2);
    
     return 0;
 }
