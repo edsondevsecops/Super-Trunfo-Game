@@ -9,8 +9,8 @@ int main(){
     float area1, area2;
     float pib1, pib2;
     int numdepontosturisticos1, numdepontosturisticos2;
-    float densidadepopulacional1, densidadepopulacional2;
-    float pibpercapta1, pibpercapta2;
+    int densidadepopulacional1, densidadepopulacional2;
+    int pibpercapta1, pibpercapta2;
 
     //Cálculo
     densidadepopulacional1 = (float) populacao1 / area1;
@@ -86,3 +86,18 @@ int main(){
    
     return 0;
 }
+
+/*
+
+Próximas melhorias
+
+Lógica permitindo comparação entre cartas determinando vencedor
+Permitir nomes com espaços (usando fgets ao invés de scanf)
+Armazenar múltiplas cartas em um arquivo e implementar o jogo completo do Super Trunfo
+
+*/
+
+//Projeto feito por:
+//Edson Teraverso - www.teraverso.com 
+
+//Data: 22/11/2025

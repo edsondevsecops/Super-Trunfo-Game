@@ -8,6 +8,10 @@ Um baralho de cartas do jogo Super Trunfo pode ter diversas temáticas e nesse p
 
 # Sobre o código
 
-Nesse código exploro conceitos iniciais de linguagem em C como variáveis como int, float e char e declaração destas variáveis através de input permitindo interação do usuário.
+Nesse código exploro conceitos iniciais de linguagem em C como variáveis como int, float e char e declaração destas variáveis através de input permitindo interação do usuário; exploro também operações matemáticas para cálculos como, por exemplo, de Densidade Populacional.
 
 Conceitos como entrada e saída de dados determinam a dinãmica de um processo de cadastramento das cartas do jogo com suas respectivas informações.
+
+# Dinâmica do jogo
+
+Este programa em C permite ao usuário cadastrar duas cartas do jogo Super Trunfo, cada uma representando uma cidade com atributos como estado, código, nome da cidade, população, área, etc. O programa calcula a densidade populacional e o PIB per capita para cada cidade e exibe todas as informações cadastradas ao final.
