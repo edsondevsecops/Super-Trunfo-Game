@@ -9,14 +9,20 @@ int main(){
     float area1, area2;
     float pib1, pib2;
     int numdepontosturisticos1, numdepontosturisticos2;
-    int densidadepopulacional1, densidadepopulacional2;
-    int pibpercapta1, pibpercapta2;
+    float densidadepopulacional1, densidadepopulacional2;
+    float pibpercapta1, pibpercapta2;
+    float superpoder1, superpoder2;
 
     //Cálculo
     densidadepopulacional1 = (float) populacao1 / area1;
     densidadepopulacional2 = (float) populacao2 / area2;
     pibpercapta1 = (float) pib1 / populacao1;
     pibpercapta2 = (float) pib2 / populacao2;
+    superpoder1 = (float) populacao1 + area1 + pib1 + pibpercapta1 + (1 / densidadepopulacional1) + numdepontosturisticos1;
+    superpoder2 = (float) populacao2 + area2 + pib2 + pibpercapta2 + (1 / densidadepopulacional2) + numdepontosturisticos2;
+    //Para contabilizar pontos referente à densidade populacional, utilizei o inverso da densidade
+    //Assim, quanto menor a densidade, maior o valor de (1 / densidadepopulacional)
+    //e, consequentemente, maior o super poder da carta
 
     //Entrada de dados da primeira carta do Super Trunfo
     printf("---Vamos cadastrar a primeira carta do Super Trunfo---\n\n");
@@ -80,10 +86,24 @@ int main(){
     //Saída de dados das cartas cadastradas
     printf("As cartas cadastradas no Super Trunfo foram:\n\n");
     printf("Carta 1\n");
-    printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %f hab/Km²\nPIB per capta: %.2f reais\n\n", estado1, codigo1, cidade1, populacao1, area1, pib1, numdepontosturisticos1, densidadepopulacional1, pibpercapta1);
+    printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %f hab/Km²\nPIB per capta: %.2f reais\nSuper Poder: %.2f\n\n", estado1, codigo1, cidade1, populacao1, area1, pib1, numdepontosturisticos1, densidadepopulacional1, pibpercapta1, superpoder1);
     printf("Carta 2\n");
-    printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %f hab/Km²\nPIB per capta: %.2f reais\n", estado2, codigo2, cidade2, populacao2, area2, pib2, numdepontosturisticos2, densidadepopulacional2, pibpercapta2);
+    printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %f hab/Km²\nPIB per capta: %.2f reais\nSuper Poder: %.2f\n", estado2, codigo2, cidade2, populacao2, area2, pib2, numdepontosturisticos2, densidadepopulacional2, pibpercapta2, superpoder2);
    
+    printf("\n------------------------\n\n");
+
+    printf("Resultado: 1 = Carta 1 venceu | 0 = Carta 2 venceu\n\n");
+
+    printf("populacao1 > populacao2: %d\n", populacao1 > populacao2);
+    printf("area1 > area2: %d\n", area1 > area2);
+    printf("pib1 > pib2: %d\n", pib1 > pib2);
+    printf("numdepontosturisticos1 > numdepontosturisticos2: %d\n", numdepontosturisticos1 > numdepontosturisticos2);
+    printf("densidadepopulacional1 < densidadepopulacional2: %d\n", densidadepopulacional1 < densidadepopulacional2);
+    printf("pibpercapta1 > pibpercapta2: %d\n", pibpercapta1 > pibpercapta2);
+    printf("superpoder1 > superpoder2: %d\n", superpoder1 > superpoder2);
+    //Para densidade populacional, o critério de comparação é invertido
+    //Pois, quanto menor a densidade, melhor para a carta
+
     return 0;
 }
 
@@ -91,7 +111,8 @@ int main(){
 
 Próximas melhorias
 
-Lógica permitindo comparação entre cartas determinando vencedor
+Implementar unsigned short e long para variáveis inteiras
+Implementar double para variáveis float
 Permitir nomes com espaços (usando fgets ao invés de scanf)
 Armazenar múltiplas cartas em um arquivo e implementar o jogo completo do Super Trunfo
 
@@ -101,3 +122,4 @@ Armazenar múltiplas cartas em um arquivo e implementar o jogo completo do Super
 //Edson Teraverso - www.teraverso.com 
 
 //Data: 22/11/2025
+//Versão: 1.20
