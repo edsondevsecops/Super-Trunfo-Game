@@ -90,9 +90,63 @@ int main(){
     printf("Carta 2\n");
     printf("Estado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d habitantes\nÁrea: %.3f Km²\nPIB: %.3f bilhões de reais\nNúmero de pontos turísticos: %d\nDensidade Populacional: %f hab/Km²\nPIB per capta: %.2f reais\nSuper Poder: %.2f\n", estado2, codigo2, cidade2, populacao2, area2, pib2, numdepontosturisticos2, densidadepopulacional2, pibpercapta2, superpoder2);
    
-    printf("\n------------------------\n\n");
+    printf("\n---------------------------------------\n\n");
 
-    printf("Resultado: 1 = Carta 1 venceu | 0 = Carta 2 venceu\n\n");
+    printf("Resultado do duelo entre Carta 1 e carta 2\n\n");
+
+    printf("População: ");
+    if (populacao1 > populacao2) {
+        printf("A Carta 1 venceu\n");
+    } else {
+        printf("A Carta 2 venceu\n");
+    }
+
+    printf("Área: ");
+    if (area1 > area2) {    
+        printf("A Carta 1 venceu\n");
+    } else {
+        printf("A Carta 2 venceu\n");
+    }   
+
+    printf("PIB: ");
+    if (pib1 > pib2) {    
+        printf("A Carta 1 venceu\n");
+    } else {
+        printf("A Carta 2 venceu\n");
+    }
+
+    printf("Número de pontos turísticos: ");
+    if (numdepontosturisticos1 > numdepontosturisticos2) {    
+        printf("A Carta 1 venceu\n");
+    } else {
+        printf("A Carta 2 venceu\n");
+    }
+
+    printf("Densidade populacional: ");
+    if (densidadepopulacional1 < densidadepopulacional2) {    
+        printf("A Carta 1 venceu\n");
+    } else {
+        printf("A Carta 2 venceu\n");
+    }
+
+    printf("PIB per capta: ");
+    if (pibpercapta1 > pibpercapta2) {    
+        printf("A Carta 1 venceu\n");
+    } else {
+        printf("A Carta 2 venceu\n");
+    }
+
+    printf("Super poder: ");
+    if (superpoder1 > superpoder2) {    
+        printf("A Carta 1 venceu\n");
+    } else {
+        printf("A Carta 2 venceu\n");
+    }
+
+    /*
+
+    Estrutura inicial substituída por if else para mostrar quem venceu
+    Onde 1 significa Carta 1 venceu e 0 significa Carta 2 venceu
 
     printf("populacao1 > populacao2: %d\n", populacao1 > populacao2);
     printf("area1 > area2: %d\n", area1 > area2);
@@ -103,6 +157,8 @@ int main(){
     printf("superpoder1 > superpoder2: %d\n", superpoder1 > superpoder2);
     //Para densidade populacional, o critério de comparação é invertido
     //Pois, quanto menor a densidade, melhor para a carta
+
+    */
 
     return 0;
 }
@@ -122,4 +178,4 @@ Armazenar múltiplas cartas em um arquivo e implementar o jogo completo do Super
 //Edson Teraverso - www.teraverso.com 
 
 //Data: 22/11/2025
-//Versão: 1.20
+//Versão: 1.21
